@@ -1,0 +1,129 @@
+.body {
+  background-color: #f1efe3;
+}
+
+.home_header {
+  padding-top: 50px;
+  height: 375px;
+  //   background-color: red;
+
+  .parent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    .child {
+      margin: auto;
+      h1 {
+        font-size: 4.6rem;
+        text-align: center;
+        line-height: 1.2;
+        font-family: "Livvic", sans-serif;
+        font-weight: 700;
+      }
+      .inputcontainer {
+        padding: 5px;
+        background-color: #e0e0d4;
+        height: 55px;
+        width: 500px;
+        max-width: 80vw;
+        display: flex;
+        border-radius: 50px;
+
+        margin: auto;
+        margin-top: 45px;
+        .search_child {
+          //   background-color: red;
+          width: 100%;
+        }
+        input {
+          // make background transparent
+          background-color: transparent;
+          // remove border
+          padding-left: 30px;
+          border: none;
+          width: 85%;
+          //   background-color: red;
+          padding-top: 10px;
+          font-size: 1.6rem;
+
+          &:focus {
+            // remove blue focus
+            outline: none;
+          }
+        }
+        button {
+          height: 44px;
+          width: 44px;
+          border-radius: 50%;
+          background-color: #5218aa;
+          border: none;
+          float: right;
+          display: flex;
+          img {
+            height: 15px;
+            width: 15px;
+            object-fit: contain;
+            color: white;
+
+            margin: auto;
+            // make image white
+            filter: invert(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#spotlight {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .service_card {
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    //   background-color: red;
+    min-height: 50px;
+    .service_card_img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 500px;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      // reduce height on mobile
+      @media (max-width: 768px) {
+        max-height: 300px;
+      }
+    }
+  }
+  .categories {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #e0e0d4;
+      padding: 10px;
+      border-radius: 15px;
+      color: black;
+      margin-top: 25px;
+      margin-right: 10px;
+      font-size: 12px;
+      // hover
+      &:hover {
+        background-color: #d1d1c6;
+      }
+    }
+  }
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 60px;
+
+    line-height: 1.2;
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+  }
+  p {
+    line-height: 1.5;
+    font-size: 24px;
+  }
+}

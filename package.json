@@ -3,20 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently --kill-others \"next dev\" \"npm run watch-sass\"",
     "build": "next build",
     "start": "next start",
+    "watch-sass": "sass --watch src/styles/sass/main.scss:src/styles/globals.css --style compressed",
     "lint": "next lint"
   },
   "dependencies": {
     "@types/node": "18.15.8",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
+  
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
+    "jquery": "^3.6.4",
     "next": "13.2.4",
+    "popper.js": "^1.16.1",
     "react": "18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "18.2.0",
     "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
