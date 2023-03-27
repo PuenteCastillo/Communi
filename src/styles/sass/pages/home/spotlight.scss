@@ -1,0 +1,98 @@
+#spotlight {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .service_card {
+    margin-bottom: 30px;
+    position: relative;
+    width: 100%;
+    // padding-top: 10px;
+    //   background-color: red;
+    min-height: 50px;
+    .service_card_img {
+      width: 100%;
+      object-fit: cover;
+      max-height: 650px;
+      aspect-ratio: 1/1;
+      border-radius: 20px;
+      // reduce height on mobile
+      @media (max-width: 768px) {
+        max-height: 300px;
+      }
+    }
+  }
+  .categories {
+    a {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #e0e0d4;
+      padding: 10px;
+      border-radius: 15px;
+      color: black;
+      margin-top: 25px;
+      margin-right: 10px;
+      font-size: 12px;
+      // hover
+      &:hover {
+        background-color: #d1d1c6;
+      }
+    }
+  }
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-size: 60px;
+
+    line-height: 1.2;
+    font-family: "Livvic", sans-serif;
+    font-weight: 700;
+    // on mobile
+    @media (max-width: 768px) {
+      font-size: 25px;
+    }
+  }
+  p {
+    line-height: 1.5;
+    font-size: 24px;
+    // on mobile
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}
+
+.size_small {
+  .service_card_img {
+    height: calc(325px - 30px);
+  }
+  h2 {
+    font-size: 25px !important;
+  }
+}
+
+.signUpCard {
+  background-color: #5218aa;
+  padding: 30px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  min-height: 325px;
+  position: relative;
+  color: white;
+  h2 {
+    font-size: 25px !important;
+    padding-top: 30px;
+  }
+  a {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+    display: block;
+    border-radius: 50px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+  }
+}
