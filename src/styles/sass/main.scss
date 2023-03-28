@@ -1,4 +1,8 @@
 @import "./global/reset.scss";
 @import "./global/bootstrap_tweaks.scss";
+@import "./global/colors.scss";
+@import "./global/typography.scss";
 @import "./pages/home.scss";
+@import "./pages/home/featured_post.scss";
 @import "./pages/home/spotlight.scss";
+@import "./pages/home/recent.scss";

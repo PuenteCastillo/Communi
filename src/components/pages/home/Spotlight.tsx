@@ -1,4 +1,4 @@
-import Placeholder from "../../Images/barber_placholder.jpg";
+import Placeholder from "../../../Images/barber_placholder.jpg";
 import Card from "./spotlight/Card";
 import Sign_up from "./spotlight/Sign_up";
 
@@ -29,11 +29,12 @@ export default function Spotlight(props) {
             image={Placeholder_img}
             categories={cat}
             size="large"
+            link="#"
           />
         </div>
         <div className="col-md-12 col-lg-4">
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-12">
+            <div className="col-12 col-md-12 col-lg-12">
               <Sign_up />
             </div>
             <div className="col-12 col-md-6 col-lg-12">
@@ -43,6 +44,7 @@ export default function Spotlight(props) {
                 image={Placeholder_img}
                 categories={cat}
                 size="small"
+                link="#"
               />
             </div>
             <div className="col-12 col-md-6 col-lg-12">
@@ -52,6 +54,7 @@ export default function Spotlight(props) {
                 image={Placeholder_img}
                 categories={cat}
                 size="small"
+                link="#"
               />
             </div>
           </div>
