@@ -17,7 +17,7 @@ const cat = [
   },
 ];
 
-export default function Spotlight(props) {
+export default function Spotlight(props: any) {
   return (
     <section id="spotlight" className="container">
       <div className="row">

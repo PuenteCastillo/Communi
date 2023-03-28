@@ -1,4 +1,4 @@
-export default function MainNav(props) {
+export default function MainNav(props: any) {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">

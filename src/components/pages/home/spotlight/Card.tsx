@@ -8,15 +8,13 @@ import Image from "next/image";
 
 //todo make whole card clickable
 
-export default function Card(props) {
+export default function Card(props: any) {
   // for each props.categories return a link
-  const categories = props.categories.map((category) => {
-    return (
-      <p className="cat" href={category.link}>
-        {category.name}
-      </p>
-    );
-  });
+  const categories = props.categories.map(
+    (category: { name: string; link: string }) => {
+      return <p className="cat">{category.name}</p>;
+    }
+  );
   const object_classes = `item service_card size_${props.size}`;
   return (
     <a className="Item_link" href={props.link}>

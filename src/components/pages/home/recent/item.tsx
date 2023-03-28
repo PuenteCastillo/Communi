@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Recent(props) {
+export default function Recent(props: any) {
   // map data to jsx
 
   return (
@@ -9,13 +9,12 @@ export default function Recent(props) {
         <div className="item">
           <Image src={props.image.src} alt={props.image.alt} />
           <div className="categories">
-            {props.categories.map((category, index) => {
-              return (
-                <p className="cat" href={category.link}>
-                  {category.name}
-                </p>
-              );
-            })}
+            {props.categories.map(
+              (category: { name: string; link: string }, index: number) => {
+                console.log(category);
+                return <p className="cat">{category.name}</p>;
+              }
+            )}
           </div>
           {/*  add title */}
           <h4> {props.title} </h4>

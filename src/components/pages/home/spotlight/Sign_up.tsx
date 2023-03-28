@@ -1,4 +1,4 @@
-export default function Sign_up(props) {
+export default function Sign_up(props: any) {
   return (
     <div className="signUpCard">
       <small>Sign Up </small>

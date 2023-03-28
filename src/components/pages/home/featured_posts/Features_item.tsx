@@ -9,7 +9,7 @@ import Image from "next/image";
 // owner: sting
 // link: string
 
-export default function Features_item(props) {
+export default function Features_item(props: any) {
   // reduce props.title to 20 characters
   const title =
     props.title.length > 35 ? props.title.slice(0, 35) + "..." : props.title;

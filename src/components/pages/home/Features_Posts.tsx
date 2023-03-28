@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Placeholder from "../../../Images/barber_placholder.jpg";
-import Features_item from "./featured_posts/features_item";
+import Features_item from "./featured_posts/Features_item";
 import PlaceHolder_One from "../../../Images/pool_cleaner.jpg";
 import PlaceHolder_Two from "../../../Images/landscaping.jpg";
 import PlaceHolder_Three from "../../../Images/house_cleaner.jpg";
@@ -36,7 +36,7 @@ const data = [
   },
 ];
 
-export default function Featured_Posts(props) {
+export default function Featured_Posts(props: any) {
   // map data to Features_item
   const features = data.map((item, index) => {
     return <Features_item key={index} {...item} />;

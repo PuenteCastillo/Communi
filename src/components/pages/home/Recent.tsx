@@ -2,7 +2,7 @@ import Image from "next/image";
 import Placeholder from "../../../Images/barber_placholder.jpg";
 import Item from "./recent/item";
 
-export default function Recent(props) {
+export default function Recent(props: any) {
   return (
     <section id="Recent" className="container">
       <small>Previous Posts</small>
