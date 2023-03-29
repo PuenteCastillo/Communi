@@ -1,0 +1,91 @@
+#Profile_header {
+  padding: 20px 0;
+  //   width: 375px;
+  margin: auto;
+  margin-top: 50px;
+  //   max-width: 100vw;
+  overflow: hidden;
+  top: 40px;
+  background-color: white; // on mobile
+
+  .justify-content-center {
+    @media (max-width: 768px) {
+      max-width: 90vw;
+      margin: auto;
+    }
+  }
+
+  .title_row {
+    text-align: center;
+    h1 {
+      margin-bottom: 10px;
+      //   background-color: gold;
+      display: block;
+      width: fit-content;
+      margin: auto;
+      // on desktop
+      @media (min-width: 1200px) {
+        margin-bottom: 10px;
+      }
+    }
+    .title {
+      display: block;
+      width: fit-content;
+      margin: auto;
+    }
+  }
+  .cal_animate {
+    // background-color: red;
+    background-color: white;
+  }
+  .details {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // background-color: red;
+    .col {
+      display: flex;
+      height: 140px;
+      position: relative;
+      .col-content {
+        margin: auto;
+        position: relative;
+        text-align: center;
+      }
+      img {
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+        margin: auto;
+
+        // background-color: red;
+      }
+    }
+    small {
+      text-transform: uppercase;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+    small {
+      font-family: $secondary-font;
+      font-weight: normal;
+
+      text-align: center;
+      color: #d1d1d1;
+
+      // on mobile
+      @media (max-width: 768px) {
+        font-size: 10px;
+      }
+      // on tablet
+      @media (max-width: 1024px) {
+        font-size: 12px;
+      }
+      // on desktop
+      @media (min-width: 1025px) {
+        font-size: 14px;
+      }
+    }
+  }
+}
