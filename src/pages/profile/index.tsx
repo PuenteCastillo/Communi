@@ -48,11 +48,9 @@ export default function ProfilePage() {
         "start"
       )
       .to(".bio", { duration: 0.5, opacity: 0, y: -50 }, "start")
-      .to(
-        ".cal_animate, #Profile_header",
-        { duration: 0.5, height: 80 },
-        "start"
-      )
+      .to(" #Profile_header", { duration: 0.5, height: 150 }, "start")
+      .to(".cal_animate", { duration: 0.5, height: 70 }, "start")
+      .to(".tabs", { duration: 0.5, y: -180 }, "start")
       // speed up the timeline
       .timeScale(1.5);
     // set animating to false when timeline is complete
@@ -129,6 +127,15 @@ export default function ProfilePage() {
                 things I visit with you guys.
               </p>
             </div>
+          </div>
+        </div>
+        <div className="container">
+          <div className="tabs">
+            <ul>
+              <li className="active">Overview</li>
+              <li>Experience</li>
+              <li>Education</li>
+            </ul>
           </div>
         </div>
       </section>
