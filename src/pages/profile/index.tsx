@@ -16,7 +16,7 @@ export default function ProfilePage() {
     // get width of name
     const name_width: any = name?.clientWidth;
     const title_width: any = title?.clientWidth;
-    const profile_pic_width: any = profile_pic?.clientWidth;
+    const profile_pic_width: any = profile_pic?.clientWidth / 2;
     // subtract name_width from cal_animate_width
     const cal_animate_width_minus_name_width = cal_animate_width - name_width;
     const cal_animate_width_minus_title_width = cal_animate_width - title_width;
@@ -31,7 +31,7 @@ export default function ProfilePage() {
       .to(
         profile_pic,
         {
-          x: cal_animate_width_minus_profile_pic_width + 60,
+          x: cal_animate_width_minus_profile_pic_width / 2,
           y: -105,
           transform: "scale(0.5)",
         },
@@ -79,7 +79,7 @@ export default function ProfilePage() {
           // wait for 0.5 seconds before reversing
           setTimeout(() => {
             tl.reverse();
-          }, 1000);
+          }, 800);
         }
       }
     });
