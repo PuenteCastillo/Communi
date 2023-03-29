@@ -11,7 +11,7 @@ export default function Recent(props: any) {
           <div className="categories">
             {props.categories.map(
               (category: { name: string; link: string }, index: number) => {
-                console.log(category);
+                // console.log(category);
                 return <p className="cat">{category.name}</p>;
               }
             )}

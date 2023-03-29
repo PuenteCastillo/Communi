@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../images/logo.png";
+import Logo from "../../Images/logo.png";
 
 export default function Footer(props: any) {
   return (
