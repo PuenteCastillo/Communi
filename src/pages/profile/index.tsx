@@ -16,7 +16,8 @@ export default function ProfilePage() {
     // get width of name
     const name_width: any = name?.clientWidth;
     const title_width: any = title?.clientWidth;
-    const profile_pic_width: any = profile_pic?.clientWidth / 2;
+    let profile_pic_width: any = profile_pic?.clientWidth;
+    profile_pic_width = profile_pic_width / 2;
     // subtract name_width from cal_animate_width
     const cal_animate_width_minus_name_width = cal_animate_width - name_width;
     const cal_animate_width_minus_title_width = cal_animate_width - title_width;
