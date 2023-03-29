@@ -55,6 +55,22 @@ h4 {
     font-size: 20px;
   }
 }
+h5 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  line-height: 1.2;
+  font-family: $primary-font;
+  font-weight: 700;
+  // on tablet
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+  // on mobile
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
 
 p {
   line-height: 1.5;
@@ -73,4 +89,32 @@ p {
 small {
   font-size: 14px;
   font-family: $secondary-font;
+}
+
+.theme-btn {
+  font-size: 18px;
+
+  height: 60px;
+  width: 400px;
+  max-width: 95%;
+  text-align: center;
+  display: block;
+  position: relative;
+  font-family: $secondary-font;
+  // font-weight: 700;
+  padding: 20px 20px;
+  border-radius: 50px;
+  border: 1px solid black;
+  background-color: $primary-color;
+  color: white;
+  text-decoration: none;
+
+  // on tablet
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  // on mobile
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 }

@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import MainNav from "@/components/header/MainNav";
 import Script from "next/script";
+import Footer from "@/components/global/Footer";
 
 export default function Base(props: any) {
   return (
@@ -31,7 +32,10 @@ export default function Base(props: any) {
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
       </Head>
       <MainNav />
-      <main className="body">{props.children}</main>
+      <main className="body">
+        {props.children}
+        <Footer />
+      </main>
     </>
   );
 }
