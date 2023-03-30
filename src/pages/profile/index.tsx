@@ -1,223 +1,55 @@
 import Base from "@/layouts/Base";
-import Image from "next/image";
-import profile_pic from "../../Images/profile_pic.png";
-import { useLayoutEffect } from "react";
-import { gsap } from "gsap";
+
+import Profile_header from "@/components/pages/profile/Profile_header";
+import Profile_Bio from "@/components/pages/profile/Profile_Bio";
+import Profile_services from "@/components/pages/profile/Profile_services";
+import PlaceholderImage from "../../Images/landscaping.jpg";
+import PlaceholderImage_Two from "../../Images/pool_cleaner.jpg";
+import PlaceholderImage_Three from "../../Images/barber_placholder.jpg";
 
 export default function ProfilePage() {
-  // on scroll add class to profile header
-  useLayoutEffect(() => {
-    // get profile header
-    const profile_header = document.querySelector("#Profile_header");
-    // get user details
-    const avatar_section = document.querySelector(".avatar_section");
-    // check sroll position
-    window.addEventListener("scroll", () => {
-      const scrollY = window.scrollY;
-      // if scrollY > 50 add class
-      if (scrollY > 30) {
-        avatar_section?.classList.add("avatar_animate");
-        // add sticky top class to profile header
-        avatar_section?.classList.add("sticky-top");
-      }
-      // if scrollY < 50 remove class
-      if (scrollY < 1) {
-        avatar_section?.classList.remove("avatar_animate");
-      }
-    });
-  }, []);
-
   return (
     <Base>
-      <section className="avatar_section ">
-        <div className="title_row container">
-          {/* Name  */}
-          <h1 className="name">Richard Foley</h1>
-          {/* Profession */}
-          <small className="title">Software Engineer</small>
-        </div>
-        <div className="details row">
-          {/* Endorsements */}
-          <div className="col hide_animate">
-            <div className="col-content">
-              <h3> 8k </h3>
-              <small>Jobs</small>
-            </div>
-          </div>
-          <div className="col image-container">
-            <Image
-              src={profile_pic}
-              alt="profile_pic"
-              className="profile_pic"
-            />
-          </div>
-          <div className="col hide_animate">
-            <div className="col-content">
-              <h3> 100 </h3>
-              <small> Edorsments </small>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="Bio_profile" className="">
-        <div className="container">
-          <h2> Bio</h2>
-
-          <p>
-            I'm a 24 years old Embedded Systems Engineer currently working as a
-            Freelance designer. I love to travel and share the great things I
-            visit with you guys.
-          </p>
-        </div>
-      </section>
+      <Profile_header {...data} />
+      <Profile_Bio {...data} />
       <section id="Tabs_profile" className="sticky-top">
         <div className="container">
           <div className="tabs">
             <ul>
-              <li className="active">Overview</li>
+              <li className="active">Services </li>
               <li>Experience</li>
               <li>Education</li>
             </ul>
           </div>
         </div>
       </section>
-      <div className="space"></div>
+      <div id="profile_content">
+        <Profile_services {...data} />
+      </div>
     </Base>
   );
 }
 
-// <div className="col-lg-6 col-xl-4 cal_animate user_details">
-// <div className="title_row">
-//   {/* Name  */}
-//   <h1 className="name">Richard Foley</h1>
-//   {/* Profession */}
-//   <small className="title">Software Engineer</small>
-// </div>
-// <div className="details row">
-//   {/* Endorsements */}
-//   <div className="col hide_animate">
-//     <div className="col-content">
-//       <h3> 8k </h3>
-//       <small>Jobs</small>
-//     </div>
-//   </div>
-//   <div className="col image-container">
-//     <Image
-//       src={profile_pic}
-//       alt="profile_pic"
-//       className="profile_pic"
-//     />
-//   </div>
-//   <div className="col hide_animate">
-//     <div className="col-content">
-//       <h3> 100 </h3>
-//       <small> Edorsments </small>
-//     </div>
-//   </div>
-// </div>
-// </div>
-// <section id="Profile_header" className="container">
-// <div className="row justify-content-center">
-//   <div className="col-lg-6 col-xl-6">
-//     <div className="bio">
-//       <h2> Bio</h2>
-//       <p>
-//         I'm a 24 years old Embedded Systems Engineer currently working
-//         as a Freelance designer. I love to travel and share the great
-//         things I visit with you guys.
-//       </p>
-//     </div>
-//   </div>
-// </div>
-// <div className="container">
-//   <div className="tabs">
-//     <ul>
-//       <li className="active">Overview</li>
-//       <li>Experience</li>
-//       <li>Education</li>
-//     </ul>
-//   </div>
-// </div>
-// </section>
-// <div className="spacer"></div>
-
-///// old code
-
-// useLayoutEffect(() => {
-//   // get width of cal_animate
-//   const cal_animate = document.querySelector(".cal_animate");
-//   const cal_animate_width: any = cal_animate?.clientWidth;
-//   // move name to the right of cal_animate using gspa
-//   const name = document.querySelector(".name");
-//   const title = document.querySelector(".title");
-//   const profile_pic = document.querySelector(".profile_pic");
-//   // get width of name
-//   const name_width: any = name?.clientWidth;
-//   const title_width: any = title?.clientWidth;
-//   let profile_pic_width: any = profile_pic?.clientWidth;
-//   profile_pic_width = profile_pic_width / 2;
-//   // subtract name_width from cal_animate_width
-//   const cal_animate_width_minus_name_width = cal_animate_width - name_width;
-//   const cal_animate_width_minus_title_width = cal_animate_width - title_width;
-//   const cal_animate_width_minus_profile_pic_width =
-//     cal_animate_width - profile_pic_width;
-
-//   // start the timeline
-//   const tl = gsap.timeline();
-//   tl.add("start")
-//     .to(name, { x: -cal_animate_width_minus_name_width / 2 }, "start")
-//     .to(title, { x: -cal_animate_width_minus_title_width / 2 }, "start")
-//     .to(
-//       profile_pic,
-//       {
-//         x: cal_animate_width_minus_profile_pic_width / 2,
-//         y: -105,
-//         transform: "scale(0.5)",
-//       },
-//       "start"
-//     )
-//     .to(
-//       ".hide_animate",
-//       {
-//         duration: 0.3,
-//         opacity: 0,
-//         // stagger: 0.3,
-//       },
-//       "start"
-//     )
-//     .to(".bio", { duration: 0.5, opacity: 0, y: -50 }, "start")
-//     .to(" #Profile_header", { duration: 0.5, height: 150 }, "start")
-//     .to(".cal_animate", { duration: 0.5, height: 70 }, "start")
-//     .to(".tabs", { duration: 0.5, y: -180 }, "start")
-//     // speed up the timeline
-//     .timeScale(1.5);
-//   // set animating to false when timeline is complete
-
-//   // pause the timeline on load
-//   tl.pause();
-//   // when scrolls down trigger the timeline
-
-//   window.addEventListener("scroll", () => {
-//     const scrollY = window.scrollY;
-
-//     // run only on mobile
-//     if (window.innerWidth < 768) {
-//       // add sticky top class to profile header
-//       const profile_header = document.querySelector("#Profile_header");
-//       // add class
-//       profile_header?.classList.add("sticky-top");
-
-//       // when scrolling down and sroll is > 50 animate
-//       if (scrollY > 30) {
-//         tl.play();
-//       }
-//       // when scrolling up and scroll is < 50 reverse
-//       if (scrollY < 1) {
-//         // wait for 0.5 seconds before reversing
-//         setTimeout(() => {
-//           tl.reverse();
-//         }, 800);
-//       }
-//     }
-//   });
-// }, []);
+const data = {
+  name: "Richard Foley",
+  title: "Software Engineer",
+  bio: "I'm a 24 years old Embedded Systems Engineer currently working as a Freelance designer. I love to travel and share the great things I visit with you guys.",
+  endorsements: 100,
+  jobs: 8000,
+  profile_pic:
+    "https://res.cloudinary.com/dzcmadjl1/image/upload/v1626851003/Portfolio/profile_pic.png",
+  services: [
+    {
+      title: "Car Detail & Cleaning",
+      image: PlaceholderImage,
+    },
+    {
+      title: "Deep Cleaning",
+      image: PlaceholderImage_Two,
+    },
+    {
+      title: "Exterior Cleaning",
+      image: PlaceholderImage_Three,
+    },
+  ],
+};
