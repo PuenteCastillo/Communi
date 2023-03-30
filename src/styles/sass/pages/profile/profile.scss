@@ -73,9 +73,11 @@
 }
 
 .avatar_animate {
+  padding-top: 15px;
   .title_row {
     h1 {
       width: 0;
+      margin-bottom: 0px;
       // nowrap
       transition: 0.5s;
     }
@@ -86,7 +88,7 @@
     }
   }
   .details {
-    margin-top: -55px;
+    margin-top: -44px;
     transition: 0.5s;
     padding: 0;
     transition: 0.5s;
@@ -107,7 +109,7 @@
       transition: 0.5s;
       img {
         max-height: 100%;
-        width: 55px;
+        width: 44px;
         float: right;
         margin-right: 20px;
         transition: 0.5s;
@@ -117,7 +119,7 @@
 }
 
 #Tabs_profile {
-  top: 100px;
+  top: 50px;
   z-index: 50;
   background-color: white;
   .tabs {
