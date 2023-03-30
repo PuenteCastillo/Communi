@@ -41,11 +41,15 @@
     .content {
       //   background-color: red;
       width: fit-content;
+      position: relative;
       float: right;
       p {
         font-size: 14px;
         margin-top: -10px;
         text-align: center;
+      }
+      a {
+        max-width: 80vw;
       }
       // on mobile
       @media (max-width: 768px) {
@@ -102,5 +106,8 @@
   }
   .link-col {
     margin-bottom: 30px;
+  }
+  .prostion-relative {
+    position: relative;
   }
 }

@@ -13,7 +13,7 @@ export default function Footer(props: any) {
             funded by the community.
           </small>
         </div>
-        <div className=" col-md-6">
+        <div className=" col-md-6 prostion-relative">
           <div className="content">
             <a href="#" className="theme-btn">
               Join the community
