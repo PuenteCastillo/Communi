@@ -1,8 +1,11 @@
 import Image from "next/image";
 import profile_pic from "../../../Images/profile_pic.png";
 import { useLayoutEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Profile_header(props: any) {
+  const router = useRouter();
+
   // convert 1000 to 1k
   const convert = (num: number) => {
     if (num > 999 && num < 1000000) {
@@ -40,7 +43,11 @@ export default function Profile_header(props: any) {
   }, []);
 
   return (
-    <section className="avatar_section ">
+    <section
+      className={`avatar_section ${
+        router.pathname === "/profile" ? "" : "avatar_animate"
+      }`}
+    >
       <div className="title_row container">
         {/* Name  */}
         <h1 className="name">{props.name}</h1>

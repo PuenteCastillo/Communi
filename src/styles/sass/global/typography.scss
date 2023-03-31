@@ -144,6 +144,22 @@ small {
   }
 }
 
+button {
+  padding: 10px 30px;
+  // width: 93px;
+  // height: 26px;
+  background-color: $primary-color;
+  border: 0px solid #000000;
+  color: white;
+  border-radius: 3px;
+  font-family: $secondary-font;
+  font-family: Montserrat;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center;
+  color: #fff;
+}
+
 .spacer {
   height: 1500px;
   // background-color: gold;

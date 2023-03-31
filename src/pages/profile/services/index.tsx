@@ -1,19 +1,17 @@
 import Base from "@/layouts/Base";
-
+import ProfileLayout from "@/layouts/ProfileLayout";
 import Profile_header from "@/components/pages/profile/Profile_header";
 import Profile_Bio from "@/components/pages/profile/Profile_Bio";
 import Profile_services from "@/components/pages/profile/Profile_services";
-import PlaceholderImage from "../../Images/landscaping.jpg";
-import PlaceholderImage_Two from "../../Images/pool_cleaner.jpg";
-import PlaceholderImage_Three from "../../Images/barber_placholder.jpg";
+import PlaceholderImage from "../../../Images/landscaping.jpg";
+import PlaceholderImage_Two from "../../../Images/pool_cleaner.jpg";
+import PlaceholderImage_Three from "../../../Images/barber_placholder.jpg";
 import Link from "next/link";
-import ProfileLayout from "@/layouts/ProfileLayout";
 
-export default function ProfilePage() {
+export default function ProfilePage(props: any) {
   return (
     <ProfileLayout {...data}>
-      <h1> overview</h1>
-      <div className="space"></div>
+      <Profile_services {...data} />
     </ProfileLayout>
   );
 }
