@@ -1,3 +1,51 @@
+#Service_item {
+  .item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .img_container {
+      height: 167px;
+      border-radius: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .title_row {
+      //   background-color: red;
+      h3 {
+        font-family: $secondary-font;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: left;
+        color: #4a4a4a;
+        margin-top: 10px;
+      }
+      .link {
+        float: right;
+        font-family: $secondary-font;
+        font-weight: 500;
+        font-size: 11px;
+        text-align: left;
+        color: #d8d8d8;
+        padding-top: 10px;
+      }
+      .arrow {
+        width: 12.68px;
+        object-fit: contain;
+        padding-top: 5px;
+        margin-left: 8px;
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}
+#portfolio {
+  margin-bottom: 50px;
+}
 #profile_services {
   padding-top: 20px;
   .item {
@@ -52,7 +100,7 @@
     width: 100%;
     aspect-ratio: 1/1;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 10px;
     img {
       width: 100%;
       height: 100%;
@@ -142,4 +190,9 @@
       color: #d1d1d1;
     }
   }
+}
+
+.note {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

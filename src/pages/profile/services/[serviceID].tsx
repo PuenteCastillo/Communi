@@ -1,12 +1,7 @@
-import Base from "@/layouts/Base";
 import ProfileLayout from "@/layouts/ProfileLayout";
-import Profile_header from "@/components/pages/profile/Profile_header";
-import Profile_Bio from "@/components/pages/profile/Profile_Bio";
-import Profile_services from "@/components/pages/profile/Profile_services";
 import PlaceholderImage from "../../../Images/landscaping.jpg";
 import PlaceholderImage_Two from "../../../Images/pool_cleaner.jpg";
 import PlaceholderImage_Three from "../../../Images/barber_placholder.jpg";
-import Link from "next/link";
 import Single_service from "@/components/pages/profile/services/Single_service";
 
 export default function Service(props: any) {

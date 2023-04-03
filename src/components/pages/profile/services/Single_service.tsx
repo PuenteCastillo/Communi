@@ -33,8 +33,13 @@ export default function Single_service(props: any) {
                 <div className="col-12 position-relative mid_hight top-row">
                   <Image src={Placeholder} alt="placeholder" />
                 </div>
-                <div className="col-12 position-relative mid_high">
-                  <Image src={Placeholder} alt="placeholder" />
+                <div className="row mid_high ">
+                  <div className="col-6 position-relative ">
+                    <Image src={Placeholder} alt="placeholder" />
+                  </div>
+                  <div className="col-6 position-relative ">
+                    <Image src={Placeholder} alt="placeholder" />
+                  </div>
                 </div>
               </div>
             </div>

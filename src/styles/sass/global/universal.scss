@@ -1,0 +1,17 @@
+.profile_module {
+  //   border: 1px solid rgba($color: #000000, $alpha: 0.3);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.PR {
+  position: relative;
+  //   background-color: gold;
+}
+
+// stick to the top
+.fixed {
+  position: sticky;
+  top: 100px;
+  z-index: 100;
+}

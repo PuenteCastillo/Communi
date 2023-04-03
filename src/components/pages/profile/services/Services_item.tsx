@@ -5,11 +5,16 @@ import Link from "next/link";
 
 export default function Services_item(props: any) {
   return (
-    <div className="col-md-4">
+    <div id="Service_item" className="profile_module col-md-12">
       <Link href="/profile/services/serviceID?5555">
         <div className="item">
           <div className="img_container">
-            <Image src={props.image} alt="Placeholder" />
+            <Image
+              src={props.image}
+              alt="Placeholder"
+              width={800}
+              height={800}
+            />
           </div>
           <div className="title_row row">
             <div className="col-7">
