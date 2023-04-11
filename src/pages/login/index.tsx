@@ -3,6 +3,8 @@ import Base from "../../layouts/Base";
 import Link from "next/link";
 
 export default function Login() {
+  // submit logic
+
   return (
     <Base>
       <div id="auth" className="body">

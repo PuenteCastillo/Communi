@@ -85,4 +85,15 @@
       }
     }
   }
+  .error_container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    p {
+      font-size: 11px;
+      line-height: 1.5;
+      text-align: center;
+      color: red;
+    }
+  }
 }
