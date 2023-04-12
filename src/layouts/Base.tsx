@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import MainNav from "@/components/header/MainNav";
+import MainNav from "@/components/header/Nav";
 import Script from "next/script";
 import Footer from "@/components/global/Footer";
 

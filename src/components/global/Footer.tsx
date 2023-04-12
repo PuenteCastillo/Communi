@@ -1,28 +1,66 @@
 import Image from "next/image";
 import Logo from "../../Images/logo.png";
+import { useSession, signOut } from "next-auth/react";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Footer(props: any) {
-  return (
-    <section id="footer" className="container">
-      <div className="title_row row">
-        <div className="col-md-6">
-          <Image className="logo" src={Logo} alt="Communi Logo" />
-          <br />
-          <small>
-            Created for small buisnesses, <br />
-            funded by the community.
-          </small>
-        </div>
-        <div className=" col-md-6 prostion-relative">
-          <div className="content">
-            <a href="#" className="theme-btn">
-              Join the community
-            </a>
+  const { data: session, status } = useSession();
+
+  // check if on login page or register page
+  const router = useRouter();
+  const loginPage = router.pathname === "/login";
+  const registerPage = router.pathname === "/register";
+
+  // top section
+  const topSection = () => {
+    if (session || loginPage || registerPage) {
+      return (
+        <div className="title_row row">
+          <div className="col-md-12 align-center">
+            <Image className="logo" src={Logo} alt="Communi Logo" />
             <br />
-            <p> Support local Services </p>
+            <small>
+              Created for small buisnesses, <br />
+              funded by the community.
+            </small>
           </div>
         </div>
-      </div>
+      );
+    } else {
+      return (
+        <div className="title_row row">
+          <div className="col-md-6">
+            <Image className="logo" src={Logo} alt="Communi Logo" />
+            <br />
+            <small>
+              Created for small buisnesses, <br />
+              funded by the community.
+            </small>
+          </div>
+          <div className=" col-md-6 prostion-relative">
+            <div className="content">
+              {props.logedIn ? (
+                ""
+              ) : (
+                <>
+                  <a href="/register" className="theme-btn">
+                    Join the community
+                  </a>
+                  <br />
+                  <p> Support local Services </p>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+  };
+
+  return (
+    <section id="footer" className="container">
+      {topSection()}
       <div className="footer_links row">
         <div className="col-4 col-md-4 col-lg-2 link-col">
           <h5>Socials</h5>

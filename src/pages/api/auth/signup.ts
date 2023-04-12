@@ -3,8 +3,6 @@ import { connectToDatabase } from "../../../../lib/db";
 
 // create a new user
 export default async function handler(req: any, res: any) {
-  // log test
-  console.log("test");
   // log request method
   console.log("req.method  : ", req.method);
   // check request method

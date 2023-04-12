@@ -1,6 +1,9 @@
 #profile_content {
   padding-top: 20px;
 }
+.bio_container {
+  margin-top: 40px;
+}
 
 .avatar_section {
   padding-top: 50px;
@@ -9,8 +12,8 @@
   max-width: 100vw;
   overflow: hidden;
   margin: auto;
-
-  z-index: 100;
+  top: 40px;
+  z-index: 600;
   // on desktop
   @media (min-width: 1024px) {
     max-width: 400px;
@@ -131,7 +134,7 @@
 
 #Tabs_profile {
   top: 50px;
-  z-index: 50;
+  z-index: 500;
   background-color: white;
   //   box-shadow: -1px 33px 45px -24px rgba(0, 0, 0, 0.31);
   //   -webkit-box-shadow: -1px 33px 45px -24px rgba(0, 0, 0, 0.31);

@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Base from "../../layouts/Base";
 import Link from "next/link";
+import Nav from "../../components/header/Nav";
 
 // create a new user
 async function createUser(email: string, password: string) {
@@ -62,6 +63,8 @@ export default function Redister() {
       const result = await createUser(enteredEmail, enteredPassword);
       console.log("results : ", result);
       console.log("email asd : ", enteredEmail);
+      // redirect to portfolio
+      window.location.href = "/portfolio";
     } catch (error: any) {
       console.log(error);
       setError(error.message);
@@ -70,6 +73,7 @@ export default function Redister() {
 
   return (
     <Base>
+      <Nav />
       <div id="auth" className="body">
         <div className="login_card">
           <form onSubmit={submitHandler}>

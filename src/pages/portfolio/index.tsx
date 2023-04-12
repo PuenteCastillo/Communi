@@ -6,6 +6,32 @@ import Service_item from "@/components/pages/profile/services/Services_item";
 import Profile_all_Services from "@/components/pages/profile/Profile_all_Services";
 import Profile_copy from "@/components/pages/profile/Profile_copy";
 
+import { getSession } from "next-auth/react";
+
+// get server side props
+export async function getServerSideProps(context: any) {
+  // get session
+  const session = await getSession(context);
+
+  // if no session
+  if (!session) {
+    // redirect to login
+    return {
+      redirect: {
+        destination: "/login",
+        permanent: false,
+      },
+    };
+  }
+
+  // return session
+  return {
+    props: {
+      session,
+    },
+  };
+}
+
 export default function ProfilePage(props: any) {
   // get viewport
   const [width, setWidth] = useState(0);

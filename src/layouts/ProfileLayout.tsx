@@ -5,6 +5,7 @@ import Profile_Bio from "@/components/pages/profile/Profile_Bio";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import MainNav from "@/components/header/Nav";
 
 export default function ProfileLayout(props: any) {
   // get the current route
@@ -28,7 +29,7 @@ export default function ProfileLayout(props: any) {
       return (
         <>
           <Profile_header {...props} />
-          <div className="container">
+          <div className="container bio_container">
             <Profile_Bio {...props} />
           </div>
         </>
@@ -41,6 +42,7 @@ export default function ProfileLayout(props: any) {
 
   return (
     <Base>
+      <MainNav />
       <Header />
 
       <section id="Tabs_profile" className="sticky-top">

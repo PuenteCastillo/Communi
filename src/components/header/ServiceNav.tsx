@@ -1,10 +1,23 @@
-export default function MainNav(props: any) {
+import Link from "next/link";
+import { useSession, signOut } from "next-auth/react";
+
+export default function ServiceNav(props: any) {
+  // get session
+  const { data: session, status } = useSession();
+
+  function logoutHandler(event: any) {
+    event.preventDefault();
+    signOut({
+      callbackUrl: "/login",
+    });
+  }
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
-        </a>
+      <div className="container">
+        <Link className="navbar-brand" href="/">
+          Communi
+        </Link>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
@@ -39,8 +52,8 @@ export default function MainNav(props: any) {
             </li>
           </ul>
           <form className="d-flex" role="search">
-            <button className="btn " type="submit">
-              Join The Comunity
+            <button className="btn" onClick={logoutHandler}>
+              Log Out
             </button>
           </form>
         </div>
