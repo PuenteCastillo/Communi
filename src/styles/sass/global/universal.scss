@@ -15,3 +15,11 @@
   top: 120px;
   z-index: 100;
 }
+
+.page_content {
+  padding-top: 100px;
+  // on mibile
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+}

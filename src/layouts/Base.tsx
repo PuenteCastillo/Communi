@@ -18,6 +18,10 @@ export default function Base(props: any) {
           integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
           crossOrigin="anonymous"
         />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/ekj2bdm.css"
+        ></link>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

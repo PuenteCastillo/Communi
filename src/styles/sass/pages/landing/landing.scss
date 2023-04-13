@@ -1,0 +1,59 @@
+#landing {
+  min-height: 80vh;
+  padding-top: 50px;
+  .title_row {
+    padding-top: 50px;
+    img {
+      display: block;
+      max-height: 50px;
+      width: auto;
+      margin: auto;
+    }
+  }
+  .carousel {
+  }
+}
+
+#carouselExampleDark {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .carousel_item {
+    img {
+      display: block;
+      margin: auto;
+      object-fit: contain;
+      max-width: 80%;
+      // on mobiile
+
+      height: 300px;
+      margin-bottom: 50px;
+    }
+    text-align: center;
+    h2 {
+      margin-bottom: 30px;
+    }
+    p {
+      width: 700px;
+      margin: auto;
+      max-width: 90%;
+    }
+  }
+  .carousel-indicators {
+    display: block;
+    margin: auto;
+    // background-color: red;
+    width: fit-content;
+    // bottom: -50px;
+  }
+}
+
+.modal-dialog {
+  .modal-content {
+    padding: 50px;
+    // on mobile
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+  }
+}

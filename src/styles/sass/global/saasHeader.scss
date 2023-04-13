@@ -1,0 +1,204 @@
+#SaasHeader {
+  //   background-color: red;
+  position: relative;
+  //   padding: 50px;
+  padding-top: 0px;
+
+  min-height: 800px;
+  // on mobile
+  @media (max-width: 768px) {
+    padding: 20px;
+    // padding-top: 50px;
+    min-height: 600px;
+  }
+  .background-container {
+    // background-color: blue;
+    height: 800px;
+    width: 94%;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    // top: 75px;
+    z-index: -100;
+    // on mobile
+    @media (max-width: 768px) {
+      width: 93%;
+      height: 600px;
+    }
+    .bg-shape {
+      background-color: #f4f7fe;
+      height: 800px;
+      width: 100%;
+
+      -webkit-clip-path: polygon(0 0, 100% 0%, 100% 59%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0%, 100% 59%, 0% 100%);
+
+      //   border-radius: 10%;
+      @media (max-width: 768px) {
+        height: 600px;
+      }
+    }
+  }
+  .title-row {
+    .header-content {
+      height: 100%;
+      display: flex;
+      .child {
+        margin: auto;
+        h1 {
+          margin-bottom: 30px;
+        }
+        p {
+          line-height: 1.5;
+        }
+      }
+    }
+    .Featured_img {
+      object-fit: contain;
+      max-width: 100%;
+      // ON MOBILE
+      @media (max-width: 768px) {
+        height: 300px;
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+#HowItWorks {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .title_row {
+    width: 650px;
+    margin: auto;
+    max-width: 100%;
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    p {
+      text-align: center;
+    }
+    margin-bottom: 50px;
+  }
+
+  .content_item {
+    width: 230px;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    .content_item_image {
+      margin: auto;
+
+      height: 100px;
+      width: 100px;
+      max-width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      margin-bottom: 50px;
+      // add box shadow
+      //   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+      //   padding: 10px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    .content_item_text {
+      text-align: center;
+      h4 {
+        margin-bottom: 15px;
+      }
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+#MoreInfo {
+  max-width: 100vw;
+  overflow: hidden;
+  padding: 50px;
+  // reduce padding on mobile
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+  .content {
+    background-color: #f4f7fe;
+    border-radius: 20px;
+    padding: 50px;
+    // reduce padding on mobile
+    @media (max-width: 768px) {
+      padding: 10px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .title_row {
+      text-align: center;
+      padding-bottom: 100px;
+      // reduce padding on mobile
+      @media (max-width: 768px) {
+        padding-bottom: 50px;
+      }
+    }
+    .nav {
+      border-bottom: 0px;
+    }
+    .nav-link {
+      padding: 40px;
+      border-radius: 10px;
+      position: relative;
+      display: inline-flex;
+      border: 0px;
+      color: $pharagraph_color_dark;
+      // on hover
+      &:hover {
+        background-color: white;
+      }
+      margin-bottom: 20px;
+      // on mobile
+      @media (max-width: 768px) {
+        padding: 20px;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 80px;
+        max-width: 100%;
+        height: 80px;
+        aspect-ratio: 1/1;
+        object-fit: contain;
+        // background-color: red;
+        margin: auto;
+        display: block;
+      }
+      .left_container {
+        display: inline-block;
+        // background-color: blue;
+        width: 20%;
+      }
+      .right_container {
+        display: inline-block;
+        width: 80%;
+        padding-left: 20px;
+        // background-color: gold;
+      }
+      text-align: left;
+    }
+    .FeaturedImage {
+      object-fit: contain;
+      max-width: 100%;
+      margin-bottom: 50px;
+      // on mobile
+      @media (max-width: 768px) {
+        height: 300px;
+        // background-color: red;
+      }
+    }
+  }
+}
