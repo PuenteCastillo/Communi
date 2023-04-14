@@ -7,6 +7,7 @@ import Modal from "../components/global/Modal";
 import SaasHeader from "../components/header/SassHeader";
 import HowItWorks from "../components/global/HowItWorks";
 import MoreInfo from "../components/global/MoreInfo";
+import Goals from "../components/global/Goals";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <SaasHeader />
         <HowItWorks />
         <MoreInfo />
+        <Goals />
         <div className="hello"></div>
       </div>
     </Base>
