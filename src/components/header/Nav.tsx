@@ -23,7 +23,6 @@ export default function MainNav(props: any) {
   return (
     <>
       <GlobalNav />
-      <h1> hello world </h1>
     </>
   );
 }

@@ -1,24 +1,24 @@
 #SaasHeader {
   //   background-color: red;
   position: relative;
-  //   padding: 50px;
+  padding: 50px;
   padding-top: 0px;
-
+  overflow: hidden;
   min-height: 800px;
   // on mobile
   @media (max-width: 768px) {
-    padding: 20px;
+    padding: 10px;
     // padding-top: 50px;
     min-height: 600px;
   }
   .background-container {
     // background-color: blue;
     height: 800px;
-    width: 94%;
+    width: 100%;
     margin: auto;
     border-radius: 25px;
     overflow: hidden;
-    position: absolute;
+    // position: absolute;
     // top: 75px;
     z-index: -100;
     // on mobile
@@ -40,6 +40,16 @@
       }
     }
   }
+  .titleHeader {
+    margin-top: -800px;
+    z-index: 100;
+    position: relative;
+    // on mobile
+    @media (max-width: 768px) {
+      margin-top: -600px;
+      padding: 20px;
+    }
+  }
   .title-row {
     .header-content {
       height: 100%;
@@ -51,6 +61,10 @@
         }
         p {
           line-height: 1.5;
+        }
+        // on mobile
+        @media (max-width: 768px) {
+          text-align: center;
         }
       }
     }

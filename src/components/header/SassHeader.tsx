@@ -6,9 +6,9 @@ export default function SaasHeader() {
       <div className="background-container">
         <div className="bg-shape"></div>
       </div>
-      <div className="container">
+      <div className="container titleHeader">
         <div className="row title-row">
-          <div className="col-lg-6 col-md-12 col-sm-12 order-1 order-md-1">
+          <div className="col-lg-6 col-md-12 col-sm-12 order-1 order-md-1 order-lg-1">
             <div className="header-content">
               <div className="child">
                 <h1>Your Ultimate Business Management Solution</h1>
@@ -20,7 +20,7 @@ export default function SaasHeader() {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-sm-12 order-0 order-md-2">
+          <div className="col-lg-6 col-md-12 col-sm-12 order-0  order-md-0 order-lg-2">
             <Image
               className="Featured_img"
               src={Hero_Image}

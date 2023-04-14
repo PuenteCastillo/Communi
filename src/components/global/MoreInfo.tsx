@@ -56,7 +56,7 @@ const MoreInfo: FC<MoreInfoProps> = (props: any) => {
                     aria-selected="false"
                   >
                     <div className="left_container">
-                      <Image src={Deadline} alt="Calender of events" />
+                      <Image src={Networking} alt="Calender of events" />
                     </div>
                     <div className="right_container">
                       <h4> Build your profile</h4>
@@ -77,7 +77,7 @@ const MoreInfo: FC<MoreInfoProps> = (props: any) => {
                     aria-selected="false"
                   >
                     <div className="left_container">
-                      <Image src={Deadline} alt="Calender of events" />
+                      <Image src={Project} alt="Calender of events" />
                     </div>
                     <div className="right_container">
                       <h4> Build your profile</h4>
