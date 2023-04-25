@@ -5,62 +5,62 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function Footer(props: any) {
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
   // check if on login page or register page
   const router = useRouter();
   const loginPage = router.pathname === "/login";
   const registerPage = router.pathname === "/register";
 
-  // top section
-  const topSection = () => {
-    if (session || loginPage || registerPage) {
-      return (
-        <div className="title_row row">
-          <div className="col-md-12 align-center">
-            <Image className="logo" src={Logo} alt="Communi Logo" />
-            <br />
-            <small>
-              Created for small buisnesses, <br />
-              funded by the community.
-            </small>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="title_row row">
-          <div className="col-md-6">
-            <Image className="logo" src={Logo} alt="Communi Logo" />
-            <br />
-            <small>
-              Created for small buisnesses, <br />
-              funded by the community.
-            </small>
-          </div>
-          <div className=" col-md-6 prostion-relative">
-            <div className="content">
-              {props.logedIn ? (
-                ""
-              ) : (
-                <>
-                  <a href="/register" className="theme-btn">
-                    Join the community
-                  </a>
-                  <br />
-                  <p> Support local Services </p>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
-      );
-    }
-  };
+  // // top section
+  // const topSection = () => {
+  //   if (session || loginPage || registerPage) {
+  //     return (
+  //       <div className="title_row row">
+  //         <div className="col-md-12 align-center">
+  //           <Image className="logo" src={Logo} alt="Communi Logo" />
+  //           <br />
+  //           <small>
+  //             Created for small buisnesses, <br />
+  //             funded by the community.
+  //           </small>
+  //         </div>
+  //       </div>
+  //     );
+  //   } else {
+  //     return (
+  //       <div className="title_row row">
+  //         <div className="col-md-6">
+  //           <Image className="logo" src={Logo} alt="Communi Logo" />
+  //           <br />
+  //           <small>
+  //             Created for small buisnesses, <br />
+  //             funded by the community.
+  //           </small>
+  //         </div>
+  //         <div className=" col-md-6 prostion-relative">
+  //           <div className="content">
+  //             {props.logedIn ? (
+  //               ""
+  //             ) : (
+  //               <>
+  //                 <a href="/register" className="theme-btn">
+  //                   Join the community
+  //                 </a>
+  //                 <br />
+  //                 <p> Support local Services </p>
+  //               </>
+  //             )}
+  //           </div>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // };
 
   return (
     <section id="footer" className="container">
-      {topSection()}
+      {/* {topSection()} */}
       <div className="footer_links row">
         <div className="col-4 col-md-4 col-lg-2 link-col">
           <h5>Socials</h5>

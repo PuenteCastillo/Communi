@@ -3,14 +3,14 @@ import { useSession, signOut } from "next-auth/react";
 
 export default function GlobalNav(props: any) {
   // get session
-  const { data: session, status } = useSession();
+  // const { data: session, status } = useSession();
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container-fluid">
-        <Link className="navbar-brand" href={session ? "/portfolio" : "/"}>
+        {/* <Link className="navbar-brand" href={session ? "/portfolio" : "/"}>
           Communi Global Nav
-        </Link>
+        </Link> */}
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">

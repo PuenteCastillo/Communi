@@ -29,6 +29,10 @@ export default function Base(props: any) {
           rel="stylesheet"
         ></link>
         <script
+          src="https://kit.fontawesome.com/d8f21f0808.js"
+          crossOrigin="anonymous"
+        ></script>
+        <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
           crossOrigin="anonymous"

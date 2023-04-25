@@ -6,14 +6,16 @@
 
 .PR {
   position: relative;
-  //   background-color: gold;
+  // background-color: gold;
 }
 
 // stick to the top
 .fixed {
+  position: -webkit-sticky;
   position: sticky;
-  top: 120px;
-  z-index: 100;
+  top: 0px;
+  // background-color: red;
+  z-index: -100;
 }
 
 .page_content {
